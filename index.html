@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Box Shooter</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/V3.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+<body>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <!--div class="webgl-logo"></div-->
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <!--div class="title">Box Shooter</div-->
+        <div>
+        <pre>
+        BOX SHOOTER
+                    by Joel Shaji 
+
+        INSTRUCTIONS: 
+        -> Move around using the arrow keys or WASD and look around using the mouse
+        -> The mouse sensitivity and inverting of Y axis may be subjective so you 
+	   can adjust it in the settings tab in the main menu, according to your 
+  	   comfort. 
+	-> You need 50 points to beat level1 and you get a starting time of 15 seconds, 
+	   shoot the white cubes to increase time, the yellow will decrease time and 
+	   the greens give you 10 points each
+           
+	   
+	LEVEL2:
+
+	   Level2 is my own creation and it is what I had in mind when we started week4,
+	   I have made it longer and almost impossible to beat so that you can play around,
+	   check it out, it is a suprise :D. Incase you feel like beating it, you get 1000
+	   seconds to score 1000 points, each "enemy" gets you 10 points. 
+		
+	   Each enemy has 5 health points which is displayed above their head, you in turn
+	   have 20 health points. When you are hit, your player will recoil thus letting you
+	   know you are hit, also, your health in the top right corner will decrease. 
+		
+
+        SUGGESTIONS: 
+ 	   -> I found an initial sensitivity settings for both axis at 25% to work best so 
+	      those are the defaults I have set, feel free to change them in the settings 
+	      tab according to your comfort.
+	   -> The enemies in level2 have a pretty basic chase script so dont stay still
+	      behind an obstacle perpendicular to their direction of motion, or they wont
+	      navigate around obstacles to come get you. Try dodging their 
+	      projectiles and then killing them. 
+
+        THANK YOU :D
+        </pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
