@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//projectile destroyed on impact with anythin
 public class MyProjectileDestroyer : MonoBehaviour
 {
     public float timeOut = 2f;

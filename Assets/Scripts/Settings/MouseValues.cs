@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//script to set mouse sensitivity and inversion for game
 public class MouseValues : MonoBehaviour
 {
     public static float mouseX = 0.5f;

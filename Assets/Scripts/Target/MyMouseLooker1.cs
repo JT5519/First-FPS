@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//script to control player movemement in level1
 public class MyMouseLooker1 : MonoBehaviour
 {
     public float XSensitivity = 2f;
@@ -64,7 +65,7 @@ public class MyMouseLooker1 : MonoBehaviour
 
         cameraRotation *= Quaternion.Euler(-xRot, 0, 0);
         cameraRotation = ClampCamRotation(cameraRotation);
-
+        //slowing effect applied on player look, by slerping with self
         playerTransform.localRotation = Quaternion.Slerp(playerTransform.localRotation, playerTransform.localRotation * Quaternion.Euler(0, yRot, 0), 1);
         cameraTransform.localRotation = Quaternion.Slerp(cameraTransform.localRotation,cameraRotation, 1);
 

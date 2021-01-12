@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//script to handle settings menu. 
 public class OpenSettings : MonoBehaviour
 {
-    public GameObject settingsCanvas;
-    public GameObject myCanvas;
+    public GameObject settingsCanvas;//settings canvas
+    public GameObject myCanvas;//main canvas
     public void openSettings()
     {
         myCanvas.SetActive(false);

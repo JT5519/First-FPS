@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+//game manager, handles the game state
 public class MyGameManager : MonoBehaviour
 {
     //static game manager so only one copy of it exists
@@ -12,7 +12,7 @@ public class MyGameManager : MonoBehaviour
 
     public bool gameOver = false;
     public AudioSource gameAudio;
-
+    //UI elements
     public Text scoreText;
     private int score;
     public Text timerText;
@@ -21,7 +21,7 @@ public class MyGameManager : MonoBehaviour
 
     public bool canBeatLevel = false;
     public int beatLevelScore = 10;
-
+    //UI
     public GameObject playAgainButtons;
     public GameObject nextLevelButtons;
 
@@ -35,6 +35,7 @@ public class MyGameManager : MonoBehaviour
         {
             gm = GetComponent<MyGameManager>();
         }
+        //setting initial values
         scoreText.text = score.ToString("0");
         timerText.text = time.ToString("0.00");
         borderofScore.enabled = false;
@@ -66,25 +67,23 @@ public class MyGameManager : MonoBehaviour
             }
         }
     }
-    void EndGame()
+    void EndGame() //function to end game
     {
         timerText.text = "GAME OVER";
         gameOver = true;
         borderofScore.enabled = true;
         gameAudio.pitch = 0.5f;
         playAgainButtons.SetActive(true);
-        //disableObjects();
     }
-    void BeatLevel()
+    void BeatLevel() //function to beat level
     {
         timerText.text = "LEVEL COMPLETE";
         gameOver = true;
         borderofScore.enabled = true;
         gameAudio.pitch = 0.7f;
         nextLevelButtons.SetActive(true);
-        //disableObjects(); 
     }
-    public void ScoreAdd(int scoreAdd,float timeAdd)
+    public void ScoreAdd(int scoreAdd,float timeAdd) //scroe accumulation function
     {
         score += scoreAdd;
         scoreText.text = score.ToString("0");
@@ -94,7 +93,7 @@ public class MyGameManager : MonoBehaviour
             time = 0f;
         }
     }
-    public void PlayAgainGame()
+    public void PlayAgainGame() 
     {
         SceneManager.LoadScene(PlayAgainSceneName);
     }

@@ -1,27 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//script to handle auto target destruction after a while, in level 1
 public class MyTargetExit : MonoBehaviour
 {
 
-    public float destroyAfterSeconds = 10f;
+    public float destroyAfterSeconds = 10f; //target lifetime
     public float afterAnimationExit = 1f;
     private float destroyTime;
     private Animator anim;
-    // Start is called before the first frame update
+    
     void Start()
     {
         anim = GetComponent<Animator>();
         destroyTime = Time.time + destroyAfterSeconds;
     }
-    // Update is called once per frame
+
     void Update()
     {
         if (Time.time >= destroyTime)
         {
-            anim.SetTrigger("Exit");
-            Invoke("DestroyTarget", afterAnimationExit);
+            anim.SetTrigger("Exit"); //target shrinks so that exit looks seamless
+            Invoke("DestroyTarget", afterAnimationExit); //destroyed after a second
         }
     }
     void DestroyTarget()

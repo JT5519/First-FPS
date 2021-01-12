@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+//displays slider value as a percent next to it
 public class SliderDisp : MonoBehaviour
 {
     private Text myText;

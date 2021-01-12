@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//script to handle player shooting. Attached to camera container
 public class MyShooter : MonoBehaviour
 {
     public GameObject bulletPrefab;

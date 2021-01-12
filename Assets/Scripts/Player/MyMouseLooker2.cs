@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//script to handle player looking
 public class MyMouseLooker2 : MonoBehaviour
 {
     public float XSensitivity = 2f;
@@ -12,7 +13,7 @@ public class MyMouseLooker2 : MonoBehaviour
     //camera rotation in local space
     private Quaternion cameraContainerRotation;
 
-    public int invertMouseY = 1;
+    public int invertMouseY = 1; 
     private void Awake()
     {
         XSensitivity = MouseValues.mouseX;
@@ -26,6 +27,7 @@ public class MyMouseLooker2 : MonoBehaviour
     {
         CursorLock(true);
         playerTransform = transform;
+        //camera container used for vertical rotation
         cameraContainerTransform = gameObject.transform.Find("CameraContainer");
         cameraContainerRotation = cameraContainerTransform.localRotation;
     }
@@ -42,7 +44,6 @@ public class MyMouseLooker2 : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
     }
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetButton("Cancel"))

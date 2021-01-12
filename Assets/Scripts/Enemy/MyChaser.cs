@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*Script attached to enemy object to chase player*/
 public class MyChaser : MonoBehaviour
 {
     GameObject target;
@@ -25,7 +25,7 @@ public class MyChaser : MonoBehaviour
         {
             return;
         }
-        else
+        else //chase
         {
             transform.LookAt(target.transform);
             Gun.transform.LookAt(target.transform);

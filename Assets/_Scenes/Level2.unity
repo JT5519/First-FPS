@@ -578,7 +578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XSensitivity: 2
   YSensitivity: 2
-  invertMouseY: 1
+  invertMouseY: -1
 --- !u!1 &318935949
 GameObject:
   m_ObjectHideFlags: 0

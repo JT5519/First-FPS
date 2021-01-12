@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+//script to handle player being hit
 public class PlayerHit : MonoBehaviour
 {
     MyCameraAnim cam;

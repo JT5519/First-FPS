@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//script to handle target explosions on being hit
 public class MyTargetBehaviour : MonoBehaviour
 {
     public GameObject TargetExplosionPrefab;
@@ -15,7 +15,7 @@ public class MyTargetBehaviour : MonoBehaviour
         }
         if(collision.collider.tag=="Projectile")
         {
-            if(TargetExplosionPrefab)
+            if(TargetExplosionPrefab) //explode target and add score
             {
                 Instantiate(TargetExplosionPrefab, transform.position,transform.rotation);
             }

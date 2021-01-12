@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-
+//script to rotate the play again and next level buttons
 public class MyRotate : MonoBehaviour
 {
     public enum AxisToRotateAround {X,Y,Z};

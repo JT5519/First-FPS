@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//script attached to play again textmesh object to play same level again
 public class MyPlayAgain : MonoBehaviour
 {
     // Start is called before the first frame update
